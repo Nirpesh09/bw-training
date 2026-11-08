@@ -1,40 +1,87 @@
-<!doctype html><meta charset="utf-8"><title>Model Lab</title><style>
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:15px/1.5 ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-.wrap{max-width:1080px;margin:0 auto;padding:28px 24px 60px}
-.top{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid #eee;padding-bottom:14px;margin-bottom:22px}
-h1{font-size:26px;margin:0;letter-spacing:-.02em} .tag{font-size:11px;border:1px solid #ddd;border-radius:999px;padding:2px 8px;color:#666}
-h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:#777;margin:30px 0 12px;font-weight:600}
-.card{border:1px solid #e8e8e8;border-radius:14px;padding:16px 18px;margin-bottom:14px}
-.row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.name{font-weight:600;font-size:17px} .muted{color:#8a8a8a} .small{font-size:12.5px}
-.pill{font-size:11px;border-radius:999px;padding:3px 9px;border:1px solid #ddd;color:#555;text-transform:uppercase;letter-spacing:.06em}
-.pill.run{background:#fff8e1;border-color:#f0d79a;color:#8a6a00} .pill.done{background:#eefaf1;border-color:#b7e3c4;color:#1f7a3d}
-.metrics{display:flex;gap:34px;margin:14px 0 10px} .k{display:block;font-size:11px;color:#8a8a8a;text-transform:uppercase;letter-spacing:.06em} .v{font-variant-numeric:tabular-nums;font-size:16px;font-weight:600}
-.sample{border:1px solid #eee;border-radius:12px;overflow:hidden;margin-bottom:12px} .prompt{background:#fafafa;padding:9px 14px;font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;color:#444;border-bottom:1px solid #eee}
-.out{padding:12px 14px;white-space:pre-wrap;font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:#111}
-.box{border:1px dashed #ccc;border-radius:12px;padding:16px} input{width:100%;padding:11px 12px;border:1px solid #ddd;border-radius:9px;font-size:14px} button{margin-top:10px;padding:9px 16px;border:0;border-radius:9px;background:#111;color:#fff;font-weight:600;font-size:13px}
-</style>
-<div class="wrap"><div class="top"><h1>Model Lab</h1><span class="tag">temporary</span><span class="muted small">/lab/model</span></div>
-<h2>Test the model</h2><div class="box"><input placeholder="Ask Black Whole model anything…"><button>Send</button><div class="muted small" style="margin-top:8px">Served by /api/bw-model/v1/chat/completions</div></div>
-<h2>Training runs</h2><div class="card"><div class="row"><div><div class="name">bw-colab 26M</div><div class="muted small">Tesla T4 (Colab) · 6000 steps · 197 token vocab</div></div><span class="pill run">running</span></div>
-<div class="metrics"><div><span class="k">params</span><span class="v">25,552,896</span></div><div><span class="k">val loss</span><span class="v">—</span></div><div><span class="k">perplexity</span><span class="v">—</span></div></div>
-<div class="muted small">no curve yet</div><div class="muted small">Free Colab T4, 6000 steps, checkpoints to Drive every 50.</div></div><div class="card"><div class="row"><div><div class="name">bw-cpu 32M</div><div class="muted small">cpu (1 core) · 700 steps · 197 token vocab</div></div><span class="pill run">running</span></div>
-<div class="metrics"><div><span class="k">params</span><span class="v">32,000,000</span></div><div><span class="k">val loss</span><span class="v">2.665</span></div><div><span class="k">perplexity</span><span class="v">—</span></div></div>
-<svg width="520" height="90" viewBox="0 0 520 90"><polyline fill="none" stroke="#111" stroke-width="2" points="8.0,8.0 -116.1,59.1 -242.7,72.4 -369.4,76.5 -496.0,82.0"/></svg><div class="muted small">Local continuation run, resumes from checkpoint.</div></div><div class="card"><div class="row"><div><div class="name">bw 6M</div><div class="muted small">cpu (1 core) · 1400 steps · 197 token vocab</div></div><span class="pill done">done</span></div>
-<div class="metrics"><div><span class="k">params</span><span class="v">4,822,272</span></div><div><span class="k">val loss</span><span class="v">1.449</span></div><div><span class="k">perplexity</span><span class="v">4.26</span></div></div>
-<svg width="520" height="90" viewBox="0 0 520 90"><polyline fill="none" stroke="#111" stroke-width="2" points="8.0,8.0 -9.7,31.6 -27.7,43.4 -45.7,50.1 -63.7,52.7 -81.7,53.9 -99.7,56.7 -117.7,57.8 -135.7,61.0 -153.8,64.0 -171.8,66.2 -189.8,68.6 -207.8,70.0 -225.8,71.6 -243.8,72.5 -261.8,75.4 -279.8,76.0 -297.9,76.1 -315.9,76.4 -333.9,78.2 -351.9,78.6 -369.9,80.3 -387.9,80.3 -405.9,81.7 -423.9,82.0 -442.0,81.6 -460.0,81.0 -478.0,81.9 -496.0,81.1"/></svg><div class="muted small">Trained from scratch on the repo corpus, 3M chars.</div></div>
-<h2>The 6M model in its own words</h2><div class="sample"><div class="prompt">export async function</div><div class="out"> Secollback({
-      automation: "${fleshoder}.",
-      aname: "Bright",
-      });
-    },
-    projectId: { format_transparent: true, speeds, </div></div><div class="sample"><div class="prompt">// Build the</div><div class="out"> brear and moves exted proves the neever.
-// URL the do the model server the card result dishout is data. */
-export function Button(): nuvli</div></div><div class="sample"><div class="prompt">const router =</div><div class="out"> useRef<HTMLDivElement>(null);
-  const [semail, setMessage] = useState(from "admin");
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Black Whole — Model Lab</title>
+<style>
+:root{--ink:#111214;--mut:#6b6f76;--line:#e8e8ea;--bg:#fff;--soft:#f7f7f8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:40px 20px 80px}
+header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:600}
+h1{font-size:30px;line-height:1.2;margin:10px 0 8px;font-weight:650;letter-spacing:-.02em}
+.sub{color:var(--mut);max-width:62ch;margin:0}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:26px 0 34px}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.name{font-weight:600}
+.muted{color:var(--mut)}
+.small{font-size:12.5px}
+.badge{font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+.badge.running{background:#fff7ed;border-color:#fed7aa;color:#9a3412}
+.badge.done{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
+.metrics{display:flex;gap:22px;margin:14px 0 6px}
+.metrics b{display:block;font-size:20px;font-weight:650;letter-spacing:-.01em}
+.metrics span{font-size:12px;color:var(--mut)}
+h2{font-size:19px;margin:36px 0 6px;font-weight:620;letter-spacing:-.01em}
+.lede{color:var(--mut);margin:0 0 14px;max-width:64ch}
+textarea{width:100%;min-height:84px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);resize:vertical;background:var(--bg)}
+textarea:focus{outline:none;border-color:#b9bcc2}
+.bar{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
+button{font:inherit;font-weight:600;border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;cursor:pointer}
+button[disabled]{opacity:.5;cursor:default}
+button.ghost{background:#fff;color:var(--ink);border-color:var(--line);font-weight:500}
+.chip{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:5px 11px;background:#fff;cursor:pointer;color:var(--mut)}
+pre{margin:14px 0 0;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px;white-space:pre-wrap;word-break:break-word;font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;min-height:96px}
+.meta{font-size:12px;color:var(--mut);margin-top:8px}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mut)}
+</style></head><body><div class="wrap">
+<header><div class="kicker">Black Whole · Model Lab</div>
+<h1>Your model, running on your device</h1>
+<p class="sub">A character-level transformer trained from scratch on this codebase. The weights are int8, about 6 MB, and every token below is computed in your browser. No API, no server, no cost.</p></header>
 
-  return (
-    <motion
-      data-slate={{
-      namp</div></div>
-</div><div style="max-width:1040px;margin:0 auto;padding:14px 20px;background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;font-size:13px;color:#9a3412;line-height:1.5">Static preview of the Model Lab. The app route <code>/lab/model</code> needs the site deployed, which is blocked on Lovable credits. This page is the same layout and real run data, hosted free on GitHub Pages.</div>
+<div class="grid"><section class="card"><div class="row"><div><div class="name">bw-colab 26M</div>
+<div class="muted small">25,552,896 params · 197 char vocab · Tesla T4 (Colab)</div></div><span class="badge running">running</span></div>
+<div class="metrics"><div><b>—</b><span>val loss</span></div><div><b>6,000</b><span>steps</span></div></div>
+<div class="muted">waiting for the first evaluation</div><div class="muted small">Free Colab T4, 6000 steps, checkpoints to Drive every 50.</div></section>
+<section class="card"><div class="row"><div><div class="name">bw-cpu 32M</div>
+<div class="muted small">32,000,000 params · 197 char vocab · cpu (1 core)</div></div><span class="badge running">running</span></div>
+<div class="metrics"><div><b>2.665</b><span>val loss</span></div><div><b>700</b><span>steps</span></div></div>
+<svg viewBox="0 0 460 86" width="100%" height="86" role="img" aria-label="validation loss curve"><polyline points="M0.0,7.0 L115.0,56.7 L230.0,69.6 L345.0,73.6 L460.0,79.0" fill="none" stroke="#111" stroke-width="1.6"/></svg><div class="muted small">Local continuation run, resumes from checkpoint.</div></section>
+<section class="card"><div class="row"><div><div class="name">bw 6M</div>
+<div class="muted small">4,822,272 params · 197 char vocab · cpu (1 core)</div></div><span class="badge done">done</span></div>
+<div class="metrics"><div><b>1.449</b><span>val loss · ppl 4.26</span></div><div><b>1,400</b><span>steps</span></div></div>
+<svg viewBox="0 0 460 86" width="100%" height="86" role="img" aria-label="validation loss curve"><polyline points="M0.0,7.0 L16.4,29.9 L32.9,41.4 L49.3,48.0 L65.7,50.5 L82.1,51.7 L98.6,54.4 L115.0,55.4 L131.4,58.6 L147.9,61.5 L164.3,63.7 L180.7,66.0 L197.1,67.4 L213.6,68.8 L230.0,69.7 L246.4,72.5 L262.9,73.1 L279.3,73.2 L295.7,73.5 L312.1,75.3 L328.6,75.7 L345.0,77.4 L361.4,77.4 L377.9,78.7 L394.3,79.0 L410.7,78.6 L427.1,78.0 L443.6,78.9 L460.0,78.1" fill="none" stroke="#111" stroke-width="1.6"/></svg><div class="muted small">Trained from scratch on the repo corpus, 3M chars.</div></section></div>
+
+<h2>Ask it something</h2>
+<p class="lede">It writes code-shaped text because that is what it read. Feed it a real prefix from your own files: <code>export async function</code>, <code>const router =</code>, <code>SELECT * FROM</code>.</p>
+<textarea id="prompt">export async function</textarea>
+<div class="bar"><button id="go">Generate</button>
+<span class="chip" data-p="// Build the">// Build the</span>
+<span class="chip" data-p="const router =">const router =</span>
+<span class="chip" data-p="SELECT * FROM">SELECT * FROM</span>
+<span class="chip" data-p="&lt;div className=">&lt;div className=</span></div>
+<pre id="out">Output appears here.</pre>
+<div class="meta" id="meta"></div>
+
+<footer>Trained in this workspace, 3,000,000 characters of source, 197-symbol vocabulary. Long-form training runs on a free Colab T4 and checkpoints to Drive.</footer>
+</div>
+<script src="bw-model.js"></script>
+<script>
+const out=document.getElementById('out'), meta=document.getElementById('meta'), go=document.getElementById('go');
+let ready=false, t0=0;
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.getElementById('prompt').value=c.dataset.p;});
+go.onclick=async()=>{
+  go.disabled=true;
+  try{
+    if(!ready){ meta.textContent='loading 4.8M parameters…'; t0=performance.now(); const cfg=await BW.load('weights-js.json');
+      ready=true; meta.textContent='loaded in '+Math.round(performance.now()-t0)+' ms · '+cfg.L+' layers · '+cfg.D+' dim'; }
+    const p=document.getElementById('prompt').value;
+    out.textContent=p;
+    const t=performance.now();
+    const txt=await BW.generate(p,{maxNew:90,temperature:0.7,onToken:(s)=>{out.textContent=p+s;}});
+    meta.textContent='90 tokens in '+Math.round(performance.now()-t)+' ms, computed on this device.';
+  }catch(e){ out.textContent='Error: '+e.message; }
+  finally{ go.disabled=false; }
+};
+</script></body></html>
