@@ -1,0 +1,40 @@
+<!doctype html><meta charset="utf-8"><title>Model Lab</title><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:15px/1.5 ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 24px 60px}
+.top{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid #eee;padding-bottom:14px;margin-bottom:22px}
+h1{font-size:26px;margin:0;letter-spacing:-.02em} .tag{font-size:11px;border:1px solid #ddd;border-radius:999px;padding:2px 8px;color:#666}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:#777;margin:30px 0 12px;font-weight:600}
+.card{border:1px solid #e8e8e8;border-radius:14px;padding:16px 18px;margin-bottom:14px}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.name{font-weight:600;font-size:17px} .muted{color:#8a8a8a} .small{font-size:12.5px}
+.pill{font-size:11px;border-radius:999px;padding:3px 9px;border:1px solid #ddd;color:#555;text-transform:uppercase;letter-spacing:.06em}
+.pill.run{background:#fff8e1;border-color:#f0d79a;color:#8a6a00} .pill.done{background:#eefaf1;border-color:#b7e3c4;color:#1f7a3d}
+.metrics{display:flex;gap:34px;margin:14px 0 10px} .k{display:block;font-size:11px;color:#8a8a8a;text-transform:uppercase;letter-spacing:.06em} .v{font-variant-numeric:tabular-nums;font-size:16px;font-weight:600}
+.sample{border:1px solid #eee;border-radius:12px;overflow:hidden;margin-bottom:12px} .prompt{background:#fafafa;padding:9px 14px;font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;color:#444;border-bottom:1px solid #eee}
+.out{padding:12px 14px;white-space:pre-wrap;font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:#111}
+.box{border:1px dashed #ccc;border-radius:12px;padding:16px} input{width:100%;padding:11px 12px;border:1px solid #ddd;border-radius:9px;font-size:14px} button{margin-top:10px;padding:9px 16px;border:0;border-radius:9px;background:#111;color:#fff;font-weight:600;font-size:13px}
+</style>
+<div class="wrap"><div class="top"><h1>Model Lab</h1><span class="tag">temporary</span><span class="muted small">/lab/model</span></div>
+<h2>Test the model</h2><div class="box"><input placeholder="Ask Black Whole model anything…"><button>Send</button><div class="muted small" style="margin-top:8px">Served by /api/bw-model/v1/chat/completions</div></div>
+<h2>Training runs</h2><div class="card"><div class="row"><div><div class="name">bw-colab 26M</div><div class="muted small">Tesla T4 (Colab) · 6000 steps · 197 token vocab</div></div><span class="pill run">running</span></div>
+<div class="metrics"><div><span class="k">params</span><span class="v">25,552,896</span></div><div><span class="k">val loss</span><span class="v">—</span></div><div><span class="k">perplexity</span><span class="v">—</span></div></div>
+<div class="muted small">no curve yet</div><div class="muted small">Free Colab T4, 6000 steps, checkpoints to Drive every 50.</div></div><div class="card"><div class="row"><div><div class="name">bw-cpu 32M</div><div class="muted small">cpu (1 core) · 700 steps · 197 token vocab</div></div><span class="pill run">running</span></div>
+<div class="metrics"><div><span class="k">params</span><span class="v">32,000,000</span></div><div><span class="k">val loss</span><span class="v">2.665</span></div><div><span class="k">perplexity</span><span class="v">—</span></div></div>
+<svg width="520" height="90" viewBox="0 0 520 90"><polyline fill="none" stroke="#111" stroke-width="2" points="8.0,8.0 -116.1,59.1 -242.7,72.4 -369.4,76.5 -496.0,82.0"/></svg><div class="muted small">Local continuation run, resumes from checkpoint.</div></div><div class="card"><div class="row"><div><div class="name">bw 6M</div><div class="muted small">cpu (1 core) · 1400 steps · 197 token vocab</div></div><span class="pill done">done</span></div>
+<div class="metrics"><div><span class="k">params</span><span class="v">4,822,272</span></div><div><span class="k">val loss</span><span class="v">1.449</span></div><div><span class="k">perplexity</span><span class="v">4.26</span></div></div>
+<svg width="520" height="90" viewBox="0 0 520 90"><polyline fill="none" stroke="#111" stroke-width="2" points="8.0,8.0 -9.7,31.6 -27.7,43.4 -45.7,50.1 -63.7,52.7 -81.7,53.9 -99.7,56.7 -117.7,57.8 -135.7,61.0 -153.8,64.0 -171.8,66.2 -189.8,68.6 -207.8,70.0 -225.8,71.6 -243.8,72.5 -261.8,75.4 -279.8,76.0 -297.9,76.1 -315.9,76.4 -333.9,78.2 -351.9,78.6 -369.9,80.3 -387.9,80.3 -405.9,81.7 -423.9,82.0 -442.0,81.6 -460.0,81.0 -478.0,81.9 -496.0,81.1"/></svg><div class="muted small">Trained from scratch on the repo corpus, 3M chars.</div></div>
+<h2>The 6M model in its own words</h2><div class="sample"><div class="prompt">export async function</div><div class="out"> Secollback({
+      automation: "${fleshoder}.",
+      aname: "Bright",
+      });
+    },
+    projectId: { format_transparent: true, speeds, </div></div><div class="sample"><div class="prompt">// Build the</div><div class="out"> brear and moves exted proves the neever.
+// URL the do the model server the card result dishout is data. */
+export function Button(): nuvli</div></div><div class="sample"><div class="prompt">const router =</div><div class="out"> useRef<HTMLDivElement>(null);
+  const [semail, setMessage] = useState(from "admin");
+
+  return (
+    <motion
+      data-slate={{
+      namp</div></div>
+</div><div style="max-width:1040px;margin:0 auto;padding:14px 20px;background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;font-size:13px;color:#9a3412;line-height:1.5">Static preview of the Model Lab. The app route <code>/lab/model</code> needs the site deployed, which is blocked on Lovable credits. This page is the same layout and real run data, hosted free on GitHub Pages.</div>
